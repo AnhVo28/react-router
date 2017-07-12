@@ -1,13 +1,22 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import SignIn from 'SignIn';
+import AccountInfo from 'AccountInfo'
 
 class Account extends React.Component{
+
   render(){
-    return (
-      <div>
-        <h1>This is Account</h1>
-      </div>
-    )
-  }
+    var {username} = this.props;
+    var xhtml = username === null? <SignIn/> : <AccountInfo/>
+  return(
+    <div>
+        {xhtml}
+    </div>
+  )
+
+}
 }
 
-module.exports = Account;
+module.exports = connect(function (state) {
+  return {username: state.username}
+})(Account);

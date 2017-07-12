@@ -11,7 +11,9 @@ module.exports = {
       Account: 'app/components/Account.js',
       Main: 'app/components/Main.js',
       Nav: 'app/components/Nav.js',
-      Transaction: 'app/components/Transaction.js'
+      Transaction: 'app/components/Transaction.js',
+      SignIn: 'app/components/SignIn.js',
+      AccountInfo: 'app/components/AccountInfo.js'
     }
   },
   module: {
