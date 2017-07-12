@@ -77,7 +77,6 @@
 	};
 	var reducer = redux.combineReducers({ username: username });
 	var store = redux.createStore(reducer);
-	store.dispatch({ type: 'LOG_IN', username: 'Hoang Anh' });
 
 	var HomePage = __webpack_require__(278);
 	var Nav = __webpack_require__(279);
@@ -29888,7 +29887,14 @@
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
 	      e.preventDefault();
-	      console.log('submit');
+	      var dispatch = this.props.dispatch;
+	      var _refs = this.refs,
+	          username = _refs.username,
+	          password = _refs.password;
+
+	      if (username.value === 'hoanganh' && password.value === '123') {
+	        dispatch({ type: 'LOG_IN', username: username.value });
+	      }
 	    }
 	  }, {
 	    key: 'render',
@@ -29919,7 +29925,7 @@
 	  return SignIn;
 	}(_react2.default.Component);
 
-	module.exports = SignIn;
+	module.exports = (0, _reactRedux.connect)()(SignIn);
 
 /***/ }),
 /* 284 */
@@ -29953,6 +29959,14 @@
 	  }
 
 	  _createClass(AccountInfo, [{
+	    key: 'logOut',
+	    value: function logOut(e) {
+	      e.preventDefault();
+	      var dispatch = this.props.dispatch;
+
+	      dispatch({ type: 'LOG_OUT' });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -29968,6 +29982,11 @@
 	          null,
 	          'username: ',
 	          this.props.username
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onClick: this.logOut.bind(this) },
+	          'Log out'
 	        )
 	      );
 	    }

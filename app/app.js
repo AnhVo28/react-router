@@ -21,7 +21,7 @@ var username = (state = null, action)=>{
 }
 var reducer = redux.combineReducers({username});
 var store = redux.createStore(reducer);
-store.dispatch({type: 'LOG_IN', username: 'Hoang Anh'})
+
 
 var HomePage = require('HomePage');
 var Nav = require('Nav');
