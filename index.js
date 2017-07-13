@@ -9,11 +9,19 @@ app.use(express.static('public'));
 app.listen(3000, () => console.log('Server started'))
 app.get('/', (req, res) => res.render('home'));
 
-app.get('/try', (req, res)=>{
-  res.send('Hello Axios');
-})
-
+// app.get('/try', (req, res)=>{
+//   res.send('Hello Axios');
+// })
+//
 app.post('/axios', jsonParser, (req, res)=>{
   var text = req.body.username +' dep trai'
   res.send(text);
+})
+
+app.post('/signIn', jsonParser, (req, res)=>{
+  var {password, username} = req.body;
+  if (password === '123' && username === 'hoanganh') {
+    res.send('success');
+  }
+  res.send('fail')
 })
