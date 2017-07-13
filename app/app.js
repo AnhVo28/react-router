@@ -19,7 +19,20 @@ var username = (state = null, action)=>{
   }
   return state;
 }
-var reducer = redux.combineReducers({username});
+
+var notification = (state =null, action)=>{
+  switch (action.type) {
+    case "SHOW_NOTIFICATION":
+      return action.txt;
+      break;
+    case "HIDE_NOTIFICATION":
+      return null;
+      break;
+    default:
+      return state;
+  }
+}
+var reducer = redux.combineReducers({username, notification});
 var store = redux.createStore(reducer);
 
 

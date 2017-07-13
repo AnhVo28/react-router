@@ -13,7 +13,8 @@ module.exports = {
       Nav: 'app/components/Nav.js',
       Transaction: 'app/components/Transaction.js',
       SignIn: 'app/components/SignIn.js',
-      AccountInfo: 'app/components/AccountInfo.js'
+      AccountInfo: 'app/components/AccountInfo.js',
+      Notification: 'app/components/Notification.js'
     }
   },
   module: {

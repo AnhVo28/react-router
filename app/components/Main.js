@@ -2,13 +2,18 @@ import React from 'react';
 import Nav from 'Nav';
 import axios from 'axios'
 import {connect} from 'react-redux'
+import Notification from 'Notification';
+
 
 class Main extends React.Component{
   render(){
+    var {notification} = this.props;
+    var xhtml = notification != null? <Notification txt= {notification} /> : null;
     return (
       <div>
         <h1>Main</h1>
         <Nav/>
+        {xhtml}
         {this.props.children}
       </div>
     )
@@ -25,4 +30,6 @@ class Main extends React.Component{
   }
 }
 
-module.exports = connect()(Main);
+module.exports = connect(function (state) {
+  return {notification: state.notification}
+})(Main);

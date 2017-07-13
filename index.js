@@ -29,8 +29,9 @@ app.post('/signIn', jsonParser, (req, res)=>{
   if (password === '123' && username === 'hoanganh') {
     req.session.username = username;
     return res.send('success');
+  } else {
+    return res.send('fail')
   }
-  res.send('fail')
 })
 
 app.get('/getInfo', (req, res)=>{
