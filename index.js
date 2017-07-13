@@ -39,3 +39,8 @@ app.get('/getInfo', (req, res)=>{
   }
   res.send('not login')
 })
+
+app.get('/logout', (req, res)=>{
+  req.session.username = null;
+  res.send('da dang xuat')
+})
