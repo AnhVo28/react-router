@@ -29993,6 +29993,12 @@
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
+	var _axios = __webpack_require__(285);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _reactRedux = __webpack_require__(263);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30025,12 +30031,25 @@
 	        this.props.children
 	      );
 	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var dispatch = this.props.dispatch;
+
+	      _axios2.default.get('/getInfo').then(function (res) {
+	        if (res.data != 'not login') {
+	          dispatch({ type: 'LOG_IN', username: res.data });
+	        }
+	      }).catch(function (err) {
+	        return console.log('loi');
+	      });
+	    }
 	  }]);
 
 	  return Main;
 	}(_react2.default.Component);
 
-	module.exports = Main;
+	module.exports = (0, _reactRedux.connect)()(Main);
 
 /***/ }),
 /* 285 */
