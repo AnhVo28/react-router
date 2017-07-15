@@ -49,6 +49,8 @@ var requireLogin = (nextState, replace, next)=>{
   next();
 }
 
+require('style!css!foundation-sites/dist/css/foundation.min.css')
+
 ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
