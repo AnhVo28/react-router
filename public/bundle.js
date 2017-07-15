@@ -157,6 +157,7 @@
 	};
 
 	__webpack_require__(318);
+	__webpack_require__(324);
 	$(document).ready(function () {
 	  return $(document).foundation();
 	});
@@ -31434,7 +31435,7 @@
 	      var xhtml = username === null ? _react2.default.createElement(_SignIn2.default, null) : _react2.default.createElement(_AccountInfo2.default, null);
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'small-10 medium-6 large-4 columns' },
+	        { className: 'small-10 large-4 columns small-centered' },
 	        xhtml
 	      );
 	    }
@@ -31721,11 +31722,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'row' },
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Main'
-	        ),
 	        _react2.default.createElement(_Nav2.default, null),
 	        xhtml,
 	        this.props.children
@@ -32399,6 +32395,51 @@
 /***/ (function(module, exports) {
 
 	module.exports = jQuery;
+
+/***/ }),
+/* 324 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(325);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// Prepare cssTransformation
+	var transform;
+
+	var options = {}
+	options.transform = transform
+	// add the styles to the DOM
+	var update = __webpack_require__(321)(content, options);
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../node_modules/css-loader/index.js!./style.scss", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 325 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(320)(undefined);
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
 
 /***/ })
 /******/ ]);

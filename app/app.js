@@ -50,6 +50,7 @@ var requireLogin = (nextState, replace, next)=>{
 }
 
 require('style!css!foundation-sites/dist/css/foundation.min.css')
+require('style!css!./css/style.scss');
 $(document).ready(() => $(document).foundation());
 
 
