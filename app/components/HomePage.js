@@ -14,9 +14,8 @@ class HomePage extends React.Component{
   }
   render(){
     return (
-      <div>
-        <h1>This is Homepage</h1>
-        <button onClick={this.handleRequest.bind(this)}>request</button>
+      <div className="small-12 columns small-centered homepage">
+        <img src="1.png"/>
       </div>
     )
   }

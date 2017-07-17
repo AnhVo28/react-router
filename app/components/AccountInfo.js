@@ -19,7 +19,7 @@ class AccountInfo extends React.Component{
       <div>
         <h1>This is Account</h1>
         <p>Username: {this.props.username}</p>
-        <a href="#" onClick={this.logOut.bind(this)}>Log out</a>
+        <a href="#" className="button" onClick={this.logOut.bind(this)}>Log out</a>
       </div>
     )
   }

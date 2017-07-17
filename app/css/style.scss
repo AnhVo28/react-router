@@ -7,3 +7,16 @@ $space: 2.5rem;
   margin-top: $space;
   margin-bottom: $space *2;
 }
+.notification{
+   background-color: $warning-color;
+  //  margin: 0px;
+ }
+
+ .p-notification{
+   margin-bottom: 0px;
+ }
+
+ .homepage {
+   padding-right: 0px;
+   padding-left: 0px;
+  }

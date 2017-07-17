@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 class Notification extends React.Component{
   render(){
     return (
-      <div >
-        <p className="text-center">{this.props.txt}</p>
+      <div className="notification">
+        <p className="p-notification text-center">{this.props.txt}</p>
       </div>
     )
   }
