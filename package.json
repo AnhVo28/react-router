@@ -1,7 +1,7 @@
 {
-  "name": "react-server-side2311",
+  "name": "react-router",
   "version": "1.0.0",
-  "description": "",
+  "description": "React router tutorial",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.16.2",
@@ -34,12 +34,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vanpho93/redux-kpt.git"
+    "url": "git+https://github.com/HoangAnhVo/react-router.git"
   },
-  "author": "Van Pho Nguyen",
+  "keywords": [
+    "react",
+    "react-router"
+  ],
+  "author": "Hoang Anh Vo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vanpho93/redux-kpt/issues"
+    "url": "https://github.com/HoangAnhVo/react-router/issues"
   },
-  "homepage": "https://github.com/vanpho93/redux-kpt#readme"
+  "homepage": "https://github.com/HoangAnhVo/react-router#readme"
 }

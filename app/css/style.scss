@@ -1,4 +1,9 @@
+@import "~foundation-sites/scss/foundation";
+@include foundation-everything;
+
+$space: 2.5rem;
+
 .page-title{
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: $space;
+  margin-bottom: $space *2;
 }
